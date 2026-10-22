@@ -126,6 +126,7 @@ exam-scheduling-difficulty-analysis/
 │   ├── tables/                        # Exported CSV tables
 │   ├── figures/                       # Publication figures (Figures 1–7)
 │   └── schedules/                     # Ranked schedule CSVs
+├── .github/workflows/reproduce.yml  # GitHub Actions verification
 ├── tests/
 │   ├── test_permutations.py           # Permutation enumeration & uniqueness
 │   ├── test_scoring.py                # Objective scoring & Khanna [1] benchmarks
@@ -153,3 +154,8 @@ exam-scheduling-difficulty-analysis/
 ## License
 
 This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
+
+
+## Reproducibility safeguards
+
+The production pipeline rejects incomplete respondent counts and raises an error when any numerical regression checkpoint fails. `config/experiment.yaml` is a **reference configuration**, not a runtime-loaded parameter source; the current pipeline uses the documented paths and benchmark constants in the Python code. GitHub Actions runs pytest and the analysis on supported Python versions. A green CI status is required before citing tests as passing. The MIT license applies to software; survey-data reuse requires separate permission.
