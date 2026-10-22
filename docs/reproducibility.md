@@ -53,13 +53,13 @@ Running this script automatically performs all computations and populates:
    - `table_sensitivity_fairness.csv`: Equal weighting, minimax, and perturbation stability findings.
 
 2. **`results/figures/`**:
-   - `figure_1_sample_composition.png`: Sample composition (Figure 1).
-   - `figure_2_difficulty_means.png`: Mean difficulty comparisons (Figure 2).
-   - `figure_3_aggregate_scores.png`: Aggregate scheduling scores (Figure 3).
-   - `figure_4_score_reductions.png`: Percentage score reductions (Figure 4).
-   - `figure_5_rating_distribution.png`: Rating distribution frequencies (Figure 5).
-   - `figure_6_computational_workflow.png`: Optimization workflow diagram (Figure 6).
-   - `figure_7_individual_optimality_gaps.png`: Individual optimality gaps (Figure 7).
+   - `figure_1_sample_composition.png`: Figure 1 — Respondent composition.
+   - `figure_2_computational_workflow.png`: Figure 2 — Computational workflow.
+   - `figure_3_difficulty_means.png`: Figure 3 — Student, teacher and original assumed ratings.
+   - `figure_4_mean_scheduling_scores.png`: Figure 4 — Mean scores for all 35 respondents.
+   - `figure_5_score_reductions.png`: Figure 5 — Selected versus group-minimum reductions.
+   - `figure_6_rating_distribution.png`: Figure 6 — Difficulty-rating frequency heatmap.
+   - `figure_7_individual_optimality_gaps.png`: Figure 7 — Individual optimality-gap frequency histogram.
 
 3. **`results/schedules/`**:
    - `all_120_schedules_ranked.csv`: Comprehensive score ranking for all 120 candidate examination schedules across Combined, Student, and Teacher cohorts.
@@ -94,3 +94,7 @@ pytest
 ## Reproducibility safeguards
 
 The fixed-sample run requires exactly 30 student and 5 teacher records and stops on missing records or failed numerical regression checkpoints. The YAML file is reference documentation and is not automatically loaded by the experiment script. Continuous integration is defined in `.github/workflows/reproduce.yml`; consult the workflow status for execution results. Survey-data reuse is separate from the MIT software license.
+
+
+## Final manuscript chart alignment
+The seven images generated from `python run_analysis.py` correspond **in order and statistical content** to Figures 1–7 of the accompanying manuscript. Captions are provided in the manuscript and should not be confused with chart titles. Generated files are not committed to Git and must be regenerated.
