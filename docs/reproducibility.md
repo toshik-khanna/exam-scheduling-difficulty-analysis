@@ -2,7 +2,7 @@
 
 This guide describes how to reproduce every numerical finding, table, and figure reported in the manuscript:
 
-> Khanna, T. (2026). *Comparative Analysis of Student and Teacher Difficulty Assessments in Mathematical Examination Timetabling: An Exploratory A Level Study*.
+> Khanna, T. (2026). *Comparative Analysis of Mathematically Optimized Examination Timetables Using Student–Teacher Difficulty Ratings: An A Level Exploratory Study*.
 
 ---
 
@@ -12,8 +12,8 @@ This guide describes how to reproduce every numerical finding, table, and figure
 - **Supported Operating Systems**: Windows 10/11, macOS, Linux
 - **Required Libraries**:
   - `pandas` (>= 1.5.0)
-  - `numpy` (>= 1.23.0)
-  - `matplotlib` (>= 3.6.0)
+  - `numpy` (>= 1.24.0)
+  - `matplotlib` (>= 3.7.0)
   - `PyYAML` (>= 6.0)
   - `pytest` (>= 7.0.0)
 
@@ -42,6 +42,8 @@ python experiments/run_analysis.py
 
 ### Generated Artifacts
 
+The `results/` directories are recreated by the analysis. Generated files are excluded from Git history; their presence is not implied by a fresh clone.
+
 Running this script automatically performs all computations and populates:
 
 1. **`results/tables/`**:
@@ -66,7 +68,7 @@ Running this script automatically performs all computations and populates:
 
 ## 4. Automated Testing and Verification
 
-To execute the test suite (21 automated test functions) and verify all mathematical regression checkpoints:
+To execute the test suite (21 source-defined automated test functions) and verify all mathematical regression checkpoints:
 
 ```bash
 pytest
