@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Exam Scheduling Difficulty Analysis"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Khanna"
+    given-names: "Toshik"
+repository-code: "https://github.com/yourusername/exam-scheduling-difficulty-analysis"
+license: MIT
+version: "1.0.0"
+date-released: "2025-01-01"
+abstract: >-
+  Python implementation for comparative analysis of student and teacher
+  difficulty assessments in mathematical examination timetabling.
+keywords:
+  - examination timetabling
+  - optimization
+  - difficulty assessment
+  - mathematical model

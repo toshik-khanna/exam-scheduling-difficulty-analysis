@@ -1,0 +1,72 @@
+# Experiment Configuration
+# Comparative Analysis of Student and Teacher Difficulty Assessments
+
+experiment:
+  name: "Exam Scheduling Difficulty Analysis"
+  version: "1.0.0"
+
+data:
+  input_file: "data/survey/difficulty_ratings.csv"
+  encoding: "utf-8"
+
+subjects:
+  names: ["M", "P", "C", "CS", "E"]
+  full_names:
+    M: "Mathematics"
+    P: "Physics"
+    C: "Chemistry"
+    CS: "Computer Science"
+    E: "English"
+
+rating_scale:
+  min: 1
+  max: 5
+
+respondent_groups:
+  students:
+    prefix: "S"
+    expected_count: 30
+  teachers:
+    prefix: "T"
+    expected_count: 5
+
+reference_schedules:
+  baseline: ["M", "P", "C", "E", "CS"]
+  khanna_selected: ["M", "CS", "C", "E", "P"]
+
+reference_scores:
+  original_assumed:
+    M: 5
+    P: 5
+    C: 4
+    CS: 3
+    E: 2
+  original_baseline_score: 59
+  original_minimum_score: 45
+  original_optimal_count: 4
+
+output:
+  tables_dir: "results/tables"
+  figures_dir: "results/figures"
+  schedules_dir: "results/schedules"
+
+figures:
+  dpi: 300
+  format: "png"
+  style: "seaborn-v0_8-whitegrid"
+  colors:
+    baseline: "#1B2A4A"
+    optimized: "#2A9D8F"
+    supporting: "#808080"
+    student: "#264653"
+    teacher: "#E76F51"
+    combined: "#2A9D8F"
+
+regression_checks:
+  combined_baseline: 2127
+  combined_minimum: 1963
+  student_baseline: 1833
+  student_minimum: 1689
+  teacher_baseline: 294
+  teacher_minimum: 273
+  combined_optimal_count: 2
