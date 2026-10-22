@@ -141,7 +141,7 @@ def run_pipeline(
             all_passed = False
 
     if not all_passed:
-        print("\nWARNING: One or more regression checks failed!")
+        raise RuntimeError("Numerical regression checks failed; refusing to report successful reproduction.")
     else:
         print("\nAll regression checks PASSED with exact numerical precision.")
 
@@ -186,7 +186,7 @@ def run_pipeline(
         print(f"        - {os.path.basename(fig_path)}")
 
     print("\n" + "=" * 75)
-    print("ANALYSIS COMPLETE — ALL REPRODUCIBILITY TARGETS ACHIEVED")
+    print("ANALYSIS COMPLETE — NUMERICAL REGRESSION CHECKS PASSED")
     print("=" * 75)
 
 
