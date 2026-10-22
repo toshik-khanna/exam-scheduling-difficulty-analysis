@@ -2,7 +2,7 @@
 
 This guide describes how to reproduce every numerical finding, table, and figure reported in the manuscript:
 
-> Khanna, T. (2025). *Comparative Analysis of Student and Teacher Difficulty Assessments in Mathematical Examination Timetabling: An Exploratory A Level Study*.
+> Khanna, T. (2026). *Comparative Analysis of Student and Teacher Difficulty Assessments in Mathematical Examination Timetabling: An Exploratory A Level Study*.
 
 ---
 
@@ -23,7 +23,7 @@ This guide describes how to reproduce every numerical finding, table, and figure
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/exam-scheduling-difficulty-analysis.git
+git clone https://github.com/toshik-khanna/exam-scheduling-difficulty-analysis.git
 cd exam-scheduling-difficulty-analysis
 
 # Install dependencies
@@ -66,21 +66,24 @@ Running this script automatically performs all computations and populates:
 
 ## 4. Automated Testing and Verification
 
-To execute the test suite and verify all mathematical regression checkpoints:
+To execute the test suite (21 automated test functions) and verify all mathematical regression checkpoints:
 
 ```bash
-pytest tests/ -v
+pytest
+# or: python run_tests.py
+# or: pytest tests/ -v
 ```
 
-### Verified Test Cases:
-- Exhaustive enumeration of $5! = 120$ permutations (`test_permutations.py`)
-- Reversal symmetry of consecutive-burden objective across all schedules (`test_scoring.py`)
-- Original Khanna [1] assumed-score regression checkpoints (59 baseline, 45 minimum) (`test_scoring.py`)
-- Input validation and bounds checking (`test_validation.py`)
-- Individual optimizer gap non-negativity (`test_individual_optimizer.py`)
-- Group aggregation correctness and tie preservation (`test_group_optimizer.py`)
-- Exact numerical reproducibility of all manuscript findings (`test_reproducibility.py`):
-  - Students baseline = 1,833; minimum = 1,689
-  - Teachers baseline = 294; minimum = 273
-  - Combined baseline = 2,127; minimum = 1,963
+### Verified Test Cases (21 tests across 6 modules):
+- Exhaustive enumeration of $5! = 120$ permutations, 5 unique subjects, and reversal preservation (`test_permutations.py`, 3 tests)
+- Consecutive-burden scoring, Khanna [1] assumed-score benchmarks (59 baseline, 45 minimum, 4 tied optima), and reversal symmetry (`test_scoring.py`, 4 tests)
+- Input validation, duplicate rejection, rating range $[1, 5]$ bounds, and missing field rejection (`test_validation.py`, 4 tests)
+- Individual optimizer structure and non-negative optimality gap ($G_r \ge 0$) (`test_individual_optimizer.py`, 2 tests)
+- Group aggregation correctness and tie preservation (`test_group_optimizer.py`, 2 tests)
+- Exact numerical reproducibility and sensitivity verification (`test_reproducibility.py`, 6 tests):
+  - Respondent counts ($N=35$, 30 students, 5 teachers)
+  - Descriptive subject means matching manuscript Table 8
+  - Group baseline and minimum scores (Students 1,833/1,689; Teachers 294/273; Combined 2,127/1,963)
   - Combined optimal timetable count = 2
+  - Teacher joint optimum divergence from student joint optimum
+  - Exact rating perturbation sensitivity across 301 single-point scenarios (100% retention)

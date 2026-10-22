@@ -5,12 +5,14 @@ type: software
 authors:
   - family-names: "Khanna"
     given-names: "Toshik"
-repository-code: "https://github.com/yourusername/exam-scheduling-difficulty-analysis"
+    email: "toshikkhanna@gmail.com"
+repository-code: "https://github.com/toshik-khanna/exam-scheduling-difficulty-analysis"
+url: "https://github.com/toshik-khanna/exam-scheduling-difficulty-analysis"
 license: MIT
 version: "1.0.0"
-date-released: "2025-01-01"
+date-released: "2026-10-22"
 abstract: >-
-  Python implementation for comparative analysis of student and teacher
+  Python research implementation for comparative analysis of student and teacher
   difficulty assessments in mathematical examination timetabling.
 keywords:
   - examination timetabling

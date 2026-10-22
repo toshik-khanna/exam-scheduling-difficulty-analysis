@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exam-scheduling-difficulty-analysis"
+version = "1.0.0"
+authors = [
+  { name = "Toshik Khanna", email = "toshikkhanna@gmail.com" },
+]
+description = "Comparative Analysis of Student and Teacher Difficulty Assessments in Mathematical Examination Timetabling: An Exploratory A Level Study"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+  "pandas>=1.5.0",
+  "numpy>=1.24.0",
+  "matplotlib>=3.7.0",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/toshik-khanna/exam-scheduling-difficulty-analysis"
+Repository = "https://github.com/toshik-khanna/exam-scheduling-difficulty-analysis.git"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

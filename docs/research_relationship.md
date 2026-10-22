@@ -4,7 +4,7 @@
 
 In the preliminary study:
 
-> Khanna, T. (2025). *Optimizing Examination Timetables Using Mathematical Scoring Models*. DOI: 10.5281/zenodo.xxxxx
+> Khanna, T. (2025). *Optimizing Examination Timetables Using Mathematical Scoring Models*. DOI: 10.5281/zenodo.23512498
 
 the consecutive-subject burden model was introduced and solved for an assumed set of difficulty scores:
 
@@ -30,7 +30,7 @@ achieved the minimum score of **45** (a 23.73% reduction). Exactly 4 tied schedu
 
 The current paper:
 
-> Khanna, T. (2025). *Comparative Analysis of Student and Teacher Difficulty Assessments in Mathematical Examination Timetabling: An Exploratory A Level Study*.
+> Khanna, T. (2026). *Comparative Analysis of Student and Teacher Difficulty Assessments in Mathematical Examination Timetabling: An Exploratory A Level Study*.
 
 advances the research by moving from **assumed, uniform difficulty weights** to **empirical difficulty assessments** collected from 35 participants (30 students and 5 teachers).
 

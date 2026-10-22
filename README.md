@@ -12,7 +12,7 @@
 
 This repository provides a complete, reproducible Python research implementation for:
 
-> Khanna, T. (2025). *Comparative Analysis of Student and Teacher Difficulty Assessments in Mathematical Examination Timetabling: An Exploratory A Level Study*.
+> Khanna, T. (2026). *Comparative Analysis of Student and Teacher Difficulty Assessments in Mathematical Examination Timetabling: An Exploratory A Level Study*.
 
 The implementation extends the foundational examination scheduling optimization from Khanna [1]—which optimized for a single assumed difficulty vector—to **35 respondent-specific empirical difficulty rating vectors** (30 A Level students and 5 teachers), demonstrating how stakeholder perceptions affect optimal timetable selection.
 
@@ -53,7 +53,7 @@ All findings reproduce the published manuscript values with exact precision:
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/exam-scheduling-difficulty-analysis.git
+git clone https://github.com/toshik-khanna/exam-scheduling-difficulty-analysis.git
 cd exam-scheduling-difficulty-analysis
 pip install -r requirements.txt
 ```
@@ -74,10 +74,18 @@ This validates the dataset, calculates descriptive statistics, evaluates all 4,2
 ### Run Automated Tests
 
 ```bash
-pytest tests/ -v
+pytest
+# or: python run_tests.py
+# or: pytest tests/ -v
 ```
 
-All 20 regression and unit tests execute and pass in under 0.2 seconds.
+All 21 regression and unit tests execute and pass across the 6 test modules:
+- Permutation enumeration and uniqueness (3 tests)
+- Consecutive-burden scoring and reversal symmetry (4 tests)
+- Input validation and bounds checking (4 tests)
+- Individual optimization and optimality gaps (2 tests)
+- Group aggregation and symmetry preservation (2 tests)
+- Numerical reproducibility and perturbation sensitivity (6 tests)
 
 ---
 
