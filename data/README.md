@@ -37,5 +37,5 @@ Contains anonymized subject-difficulty ratings from 35 respondents (30 students 
 ### Ethical Considerations
 
 - All respondents are anonymized
-- Survey participation was voluntary
-- Data is used solely for the research described in the accompanying manuscript
+- Participation procedures and release permission require confirmation from the researcher's retained survey documentation
+- Software MIT licensing does not by itself license the individual survey responses. Confirm rights and applicable consent requirements before redistribution.
