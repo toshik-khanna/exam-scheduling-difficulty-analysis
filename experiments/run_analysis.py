@@ -83,7 +83,7 @@ def run_pipeline(
 
     # 2. Validate Data
     print("\n[2/7] Validating data integrity...")
-    val_report = validate_records(records)
+    val_report = validate_records(records, strict_counts=True)
     print(val_report.summary())
     if not val_report.is_valid:
         raise ValueError("Data validation failed! See errors above.")
