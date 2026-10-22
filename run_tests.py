@@ -1,6 +1,6 @@
 """
 Test runner script.
-Executes the complete test suite (21 tests) across all 6 test modules.
+Executes the complete test suite (24 tests) across all 7 test modules.
 
 Usage:
     python run_tests.py
