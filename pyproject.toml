@@ -8,7 +8,7 @@ version = "1.0.0"
 authors = [
   { name = "Toshik Khanna", email = "toshikkhanna@gmail.com" },
 ]
-description = "Comparative Analysis of Student and Teacher Difficulty Assessments in Mathematical Examination Timetabling: An Exploratory A Level Study"
+description = "Comparative Analysis of Mathematically Optimized Examination Timetables Using Student–Teacher Difficulty Ratings: An A Level Exploratory Study"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
