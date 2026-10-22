@@ -84,6 +84,7 @@ def validate_records(
     expected_teachers: int = 5,
     min_rating: int = 1,
     max_rating: int = 5,
+    strict_counts: bool = False,
 ) -> ValidationReport:
     """
     Validate all respondent records.
@@ -155,19 +156,13 @@ def validate_records(
 
     # Check expected counts
     if len(students) != expected_students:
-        report.add_warning(
-            f"Expected {expected_students} students, found {len(students)}"
-        )
+        (report.add_error("DATASET", "students", f"Expected {expected_students} students, found {len(students)}") if strict_counts else report.add_warning(f"Expected {expected_students} students, found {len(students)}"))
 
     if len(teachers) != expected_teachers:
-        report.add_warning(
-            f"Expected {expected_teachers} teachers, found {len(teachers)}"
-        )
+        (report.add_error("DATASET", "teachers", f"Expected {expected_teachers} teachers, found {len(teachers)}") if strict_counts else report.add_warning(f"Expected {expected_teachers} teachers, found {len(teachers)}"))
 
     total_expected = expected_students + expected_teachers
     if len(records) != total_expected:
-        report.add_warning(
-            f"Expected {total_expected} total records, found {len(records)}"
-        )
+        (report.add_error("DATASET", "total", f"Expected {total_expected} records, found {len(records)}") if strict_counts else report.add_warning(f"Expected {total_expected} total records, found {len(records)}"))
 
     return report
