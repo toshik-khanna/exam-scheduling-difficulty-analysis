@@ -11,7 +11,7 @@ enabling comparison between student and teacher optimal examination schedules.
 
 References
 ----------
-[1] Khanna, T. (2025). Optimizing Examination Timetables Using Mathematical
+[1] Khanna, T. (2026). Optimizing Examination Timetables Using Mathematical
     Scoring Models.
 """
 
