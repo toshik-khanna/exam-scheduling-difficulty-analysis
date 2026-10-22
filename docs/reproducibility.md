@@ -76,7 +76,7 @@ pytest
 # or: pytest tests/ -v
 ```
 
-### Verified Test Cases (21 tests across 6 modules):
+### Verified Test Cases (24 tests across 7 modules):
 - Exhaustive enumeration of $5! = 120$ permutations, 5 unique subjects, and reversal preservation (`test_permutations.py`, 3 tests)
 - Consecutive-burden scoring, Khanna [1] assumed-score benchmarks (59 baseline, 45 minimum, 4 tied optima), and reversal symmetry (`test_scoring.py`, 4 tests)
 - Input validation, duplicate rejection, rating range $[1, 5]$ bounds, and missing field rejection (`test_validation.py`, 4 tests)
@@ -89,3 +89,8 @@ pytest
   - Combined optimal timetable count = 2
   - Teacher joint optimum divergence from student joint optimum
   - Exact rating perturbation sensitivity across 301 single-point scenarios (100% retention)
+
+
+## Reproducibility safeguards
+
+The fixed-sample run requires exactly 30 student and 5 teacher records and stops on missing records or failed numerical regression checkpoints. The YAML file is reference documentation and is not automatically loaded by the experiment script. Continuous integration is defined in `.github/workflows/reproduce.yml`; consult the workflow status for execution results. Survey-data reuse is separate from the MIT software license.
