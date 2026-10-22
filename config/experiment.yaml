@@ -1,3 +1,6 @@
+# Reference configuration for the accompanying research implementation.
+# IMPORTANT: This YAML is documentation and is NOT parsed by run_analysis.py.
+# Changing it alone will not affect the reproducibility pipeline.
 # Experiment Configuration
 # Comparative Analysis of Student and Teacher Difficulty Assessments
 
