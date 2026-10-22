@@ -68,7 +68,7 @@ python run_analysis.py
 
 This validates the dataset, calculates descriptive statistics, evaluates all 4,200 respondent–timetable scores, checks regression benchmarks, and populates:
 - `results/tables/`: CSV summary tables
-- `results/figures/`: Publication-quality figures (Figures 1–7) at 300 DPI
+- `results/figures/`: Publication-quality figures (Figures 1–7) at 300 DPI and aligned to manuscript figure numbering
 - `results/schedules/`: Complete ranking of all 120 candidate schedules
 
 ### Run Automated Tests
@@ -159,3 +159,14 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 ## Reproducibility safeguards
 
 The production pipeline rejects incomplete respondent counts and raises an error when any numerical regression checkpoint fails. `config/experiment.yaml` is a **reference configuration**, not a runtime-loaded parameter source; the current pipeline uses the documented paths and benchmark constants in the Python code. GitHub Actions runs pytest and the analysis on supported Python versions. A green CI status is required before citing tests as passing. The MIT license applies to software; survey-data reuse requires separate permission.
+
+
+### Manuscript figures
+
+- Figure 1: `results/figures/figure_1_sample_composition.png` — Respondent composition
+- Figure 2: `results/figures/figure_2_computational_workflow.png` — Computational workflow
+- Figure 3: `results/figures/figure_3_difficulty_means.png` — Student, teacher and original assumed ratings
+- Figure 4: `results/figures/figure_4_mean_scheduling_scores.png` — Mean scores for all 35 respondents
+- Figure 5: `results/figures/figure_5_score_reductions.png` — Selected versus group-minimum reductions
+- Figure 6: `results/figures/figure_6_rating_distribution.png` — Difficulty-rating frequency heatmap
+- Figure 7: `results/figures/figure_7_individual_optimality_gaps.png` — Individual optimality-gap frequency histogram
